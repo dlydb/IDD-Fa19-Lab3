@@ -1,6 +1,6 @@
 # Data Logger (and using cool sensors!)
 
-*A lab report by John Q. Student.*
+*A lab report by Ziyu Liu.*
 
 ## In The Report
 
@@ -12,7 +12,7 @@ For this lab, we will be experimenting with a variety of sensors, sending the da
  
 **a. Based on the readings from the serial monitor, what is the range of the analog values being read?**
 
-0-1024
+0-1023
  
 **b. How many bits of resolution does the analog to digital converter (ADC) on the Arduino have?**
 
@@ -22,23 +22,37 @@ For this lab, we will be experimenting with a variety of sensors, sending the da
 
 **How might you use this with only the parts in your kit? Show us your solution.**
 
+We can wire three LEDs in red, green and blue to replace the RGB LED. Also connect a resistor with each of the LED.
+
 ## Part C. Voltage Varying Sensors 
  
 ### 1. FSR, Flex Sensor, Photo cell, Softpot
 
 **a. What voltage values do you see from your force sensor?**
 
+The voltage is between 0 - 990 when a 10k resistor is in series.
+
 **b. What kind of relationship does the voltage have as a function of the force applied? (e.g., linear?)**
+
+The relationship is positive logarithmic. The voltage changes significantly when force is low. When the force is high, the voltage changes slow.
 
 **c. Can you change the LED fading code values so that you get the full range of output voltages from the LED when using your FSR?**
 
+We can convert the reading value(A0) from 0 - 990 to 0 - 255 with a linear transformation function: y = 3.88x.
+
 **d. What resistance do you need to have in series to get a reasonable range of voltages from each sensor?**
 
+10k resistor for both photo cell and softpot.
+
 **e. What kind of relationship does the resistance have as a function of stimulus? (e.g., linear?)**
+
+The relationship for both resistor is linear.
 
 ### 2. Accelerometer
  
 **a. Include your accelerometer read-out code in your write-up.**
+
+[read-out code](https://github.com/dlydb/IDD-Fa19-Lab3/blob/master/partd.ino)
 
 ### 3. IR Proximity Sensor
 
