@@ -64,17 +64,27 @@ The relationship for both resistor is linear.
 
 **Take a picture of your screen working insert it here!**
 
+[Graphic Display](https://youtu.be/-sZHsRWXc6M)
+
 ## Part D. Logging values to the EEPROM and reading them back
  
 ### 1. Reading and writing values to the Arduino EEPROM
 
 **a. Does it matter what actions are assigned to which state? Why?**
 
+Yes. If there are three states, we cannot go from state 0 to state 2 or state 2 to state 0. For example, we have three state clear, read and write. When we are at clear state, we have to pass read if we want to access write state. Similarly, we also have to pass read state when we go from write to clear. So, the sequence of state matters. 
+
 **b. Why is the code here all in the setup() functions and not in the loop() functions?**
+
+Because we only want each state to process once.
 
 **c. How many byte-sized data samples can you store on the Atmega328?**
 
+1024 bytes. 
+
 **d. How would you get analog data from the Arduino analog pins to be byte-sized? How about analog data from the I2C devices?**
+
+The analog data is read from 0 to 1024 which is 10 bit. To convert the value to a 8 bit value, we can use a linear equation to map from 0-1024 to 0-255. However, the conversion may lower the accuracy due to the lost of some digit. For I2C, we can also map the reading to byte-size.
 
 **e. Alternately, how would we store the data if it were bigger than a byte? (hint: take a look at the [EEPROMPut](https://www.arduino.cc/en/Reference/EEPROMPut) example)**
 
