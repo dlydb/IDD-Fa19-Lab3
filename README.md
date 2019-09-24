@@ -88,6 +88,13 @@ The analog data is read from 0 to 1024 which is 10 bit. To convert the value to 
 
 **e. Alternately, how would we store the data if it were bigger than a byte? (hint: take a look at the [EEPROMPut](https://www.arduino.cc/en/Reference/EEPROMPut) example)**
 
+The data will be written on the first address, and then it will be written on the next address. 
+
+[SwitchState2](https://github.com/dlydb/IDD-Fa19-Lab3/blob/master/SwitchState2.ino)
+[state0](https://github.com/dlydb/IDD-Fa19-Lab3/blob/master/state0.ino)
+[state1](https://github.com/dlydb/IDD-Fa19-Lab3/blob/master/state1.ino)
+[state2](https://github.com/dlydb/IDD-Fa19-Lab3/blob/master/state2.ino)
+
 **Upload your modified code that takes in analog values from your sensors and prints them back out to the Arduino Serial Monitor.**
 
 ### 2. Design your logger
