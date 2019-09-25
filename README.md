@@ -101,6 +101,14 @@ The data will be written on the first address, and then it will be written on th
  
 **a. Insert here a copy of your final state diagram.**
 
+[state diagram](https://github.com/dlydb/IDD-Fa19-Lab3/blob/master/Partf/States_Diagram.jpg)
+
+I design a weight using the FSR sensor. The logger will save all the weights of item to the memory and return the one with highest weight.
+
 ### 3. Create your data logger!
  
 **a. Record and upload a short demo video of your logger in action.**
+
+[code](https://github.com/dlydb/IDD-Fa19-Lab3/tree/master/Partf)
+
+[Video](https://www.youtube.com/watch?v=vX5a6gNdOIQ&feature=youtu.be)
